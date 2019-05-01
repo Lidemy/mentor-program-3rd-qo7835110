@@ -1,6 +1,10 @@
 function join(str, concatStr) {
   let ans = '';
-  str.forEach((item) => {
+  str.forEach((item, index) => {
+    if (index === str.length - 1) {
+      ans += item;
+      return;
+    }
     ans += item + concatStr;
   });
   return ans;
